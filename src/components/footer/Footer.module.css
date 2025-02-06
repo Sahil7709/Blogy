@@ -1,0 +1,122 @@
+.footer {
+  background-color: var(--footer-bg-color);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 20px auto; /* Ensures consistent spacing */
+}
+
+.firstSection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 90px; /* Adds space between the two sections */
+}
+
+.logoSection {
+  max-width: 400px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.firstSection p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.secondSection {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 20px; /* Adjust gap between columns */
+  flex: 3;
+}
+
+.footerColumn {
+  flex: 1;
+  min-width: 150px; /* Ensures columns don't shrink too much */
+}
+
+.footerColumn h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px; /* Slightly reduced margin for consistency */
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn ul li {
+  font-size: 1rem;
+  color: var(--link-color);
+  margin-bottom: 8px; /* Reduced spacing for better compactness */
+  transition: color 0.3s ease;
+}
+
+.footerColumn ul li:hover {
+  color: var(--link-hover-color);
+}
+
+.footerColumn ul li svg {
+  margin-right: 8px;
+}
+
+.copyright {
+  text-align: start;
+  padding: 0 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack sections vertically */
+    padding: 20px;
+  }
+
+  .firstSection {
+    margin-right: 0;
+    margin-bottom: 30px; /* Adds spacing below the first section */
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .secondSection {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 30px; /* Increased gap between sections for clarity */
+    align-items: center;
+  }
+
+  .footerColumn {
+    text-align: start; /* Center-align column contents */
+  }
+
+  .copyright {
+    text-align: center; /* Center-align copyright text */
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerColumn ul li {
+    font-size: 0.9rem; /* Slightly smaller font size for smaller screens */
+  }
+
+  .logo {
+    height: 40px; /* Adjust logo size for smaller screens */
+  }
+}
